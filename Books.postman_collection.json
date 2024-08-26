@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "0f8f6457-00fe-4d56-8ac4-55eb5ed0894a",
+		"name": "Books",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36003629"
+	},
+	"item": [
+		{
+			"name": "status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{book}}/status",
+					"host": [
+						"{{book}}"
+					],
+					"path": [
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{book}}/books",
+					"host": [
+						"{{book}}"
+					],
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{book}}/books/1",
+					"host": [
+						"{{book}}"
+					],
+					"path": [
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"clientName\": \"Shathi\",\r\n   \"clientEmail\": \"Shathi12@example.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{book}}e/api-clients/",
+					"host": [
+						"{{book}}e"
+					],
+					"path": [
+						"api-clients",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "orders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "7c3ade92594c8d0eb979bac9f959909262855771307f4b500316872676b0026c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"bookId\": 1,\r\n  \"customerName\": \"John\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{book}}/orders",
+					"host": [
+						"{{book}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "orders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "7c3ade92594c8d0eb979bac9f959909262855771307f4b500316872676b0026c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{book}}/orders/s87rX3RItzcBHODlWajnl",
+					"host": [
+						"{{book}}"
+					],
+					"path": [
+						"orders",
+						"s87rX3RItzcBHODlWajnl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "7c3ade92594c8d0eb979bac9f959909262855771307f4b500316872676b0026c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerName\": \"lala\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{book}}/orders/s87rX3RItzcBHODlWajnl",
+					"host": [
+						"{{book}}"
+					],
+					"path": [
+						"orders",
+						"s87rX3RItzcBHODlWajnl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "7c3ade92594c8d0eb979bac9f959909262855771307f4b500316872676b0026c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{book}}/orders/s87rX3RItzcBHODlWajnl",
+					"host": [
+						"{{book}}"
+					],
+					"path": [
+						"orders",
+						"s87rX3RItzcBHODlWajnl"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
